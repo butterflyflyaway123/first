@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    function getDate(date) {
+        var year = date.getFullYear();//获取年
+        var month = date.getMonth();//月
+        var day = date.getDate();//日
+        var week = date.getDay();//星期
+        var hour = date.getHours();
+        var minute = date.getMinutes();
+        var second = date.getSeconds();
+        //var time = date.getTime();
+        month = month < 10 ? "0" + month : month;
+        day = day < 10 ? "0" + day : day;
+        hour = hour < 10 ? "0" + hour : hour;
+        minute = minute < 10 ? "0" + minute : minute;
+        second = second < 10 ? "0" + second : second;
+        return year + "年" + month + "月" + day + "日" + week + hour + ":" + minute + ":" + second;
+    }
+    console.log(getDate(new Date()));
+</script>
+</body>
+</html>
